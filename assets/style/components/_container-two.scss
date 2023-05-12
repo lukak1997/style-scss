@@ -1,0 +1,119 @@
+.container-two{
+    width: 100%;
+    background-color: $color-last;
+    gap:30px;
+    @include d-flex(center,center,column);
+    .container__card-wraper{
+        position: relative;
+        top: -50px;
+        width: 250px;
+        background-color: white;
+        @include d-flex(center,center,column);
+        text-align: center;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-warning;
+            color:white;
+            &:hover i{
+                background-color: $color-primery;
+                color: white;
+            }
+        }
+       i{
+        color: $color-primery;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $color-last;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+       }
+    }
+    .container__header-two{
+        padding-bottom: 10px;
+    }
+    .container__red-bottom{
+        width: 100px;
+        height: 10px;
+        background-color: $color-primery;
+        border-radius: 15px;
+    }
+    .container__paragraph-two{
+       padding: 20px  30px;
+    }
+    .container__card-wraper-two{
+        position: relative;
+        top: -50px;
+        width: 250px;
+        background-color: $color-warning;
+        @include d-flex(center,center,column);
+        text-align:center;
+         i{
+            color: $color-primery;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $color-last;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: $color-primery;
+            color: white;
+        }
+        .container__header-three{
+            color: white;
+            padding: 0 40px;
+            padding-bottom: 10px;
+
+        }
+        .container__paragraph-three{
+            padding: 20px  20px;
+            color: white;
+          
+        }
+    }
+    .container__card-wraper-three{
+        position: relative;
+        top:-50px;
+        width: 250px;
+        @include d-flex(center,center,column);
+        text-align: center;
+        background-color: white;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            background-color: $color-warning;
+            color:white;
+            &:hover i{
+                background-color: $color-primery;
+                color: white;
+            }
+        }
+        i{
+            color: $color-primery;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $color-last;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+           }
+    }
+    @include tablet{
+        @include d-flex(center,center,row);
+        gap: 10px;
+        
+    }
+    @include desktop{
+        gap: 80px;
+    }
+}

@@ -1,0 +1,91 @@
+.container-three{
+    width: 100%;
+    @include d-flex(center,center,column);
+    .main-header{
+        font-size: $font-size-medium;
+         padding-top: 50px;
+        text-align: center;
+    }
+    .container__red-bottom{
+        width: 150px;
+        background-color: $color-primery;
+        height: 10px;
+        border-radius: 15px;
+        margin-top: 20px;
+    }
+    .container__main-wraper{
+        width: 85%;
+        margin-top: 80px;
+        @include d-flex(center,center,column);
+        gap: 20px;
+        .header-one{
+            i{
+                font-size: $font-size-large;
+                padding: 0 5px;
+                transition: 0.5s;
+
+                &:hover{
+                    color: $color-primery;
+                }
+            }
+        }
+        .paragraph-one{
+            margin-top: 30px;
+           padding-right: 20px;
+        }
+    }
+    .container__main-wraper-one{
+        width: 85%;
+        margin-top: 40px;
+        @include d-flex(center,center,column);
+        gap: 20px;
+        .header-one{
+            i{
+                font-size: $font-size-large;
+                padding: 0 5px;
+                transition: 0.5s;
+
+                &:hover{
+                    color: $color-primery;
+                }
+            }
+        }
+        .paragraph-one{
+            margin-top: 30px;
+           padding-right: 20px;
+        }
+    } 
+    .container__button{
+        width: 220px;
+        height: 40px;
+        background-color: $color-primery;
+        color: white;
+        margin-top: 100px;
+        margin-bottom: 40px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover{
+            background-color: transparent;
+            border: 1px solid $color-primery;
+             color: $color-warning;
+        }
+    }
+    @include tablet{
+        .container__main-wraper{
+            @include d-flex(center,center,row);
+
+        }
+        .container__main-wraper-one{
+            @include d-flex(center,center,row);
+        }
+    }
+  
+     @include desktop{
+        .container__main-wraper{
+          padding-left: 50px;
+        }
+        .container__main-wraper-one{
+          padding-left: 50px;
+        }
+     }
+}

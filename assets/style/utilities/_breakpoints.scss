@@ -1,0 +1,16 @@
+
+@mixin pad (){
+    @media screen and (min-width:440px) {
+        @content;
+    }
+    }
+    @mixin tablet (){
+        @media screen and (min-width:744px) {
+            @content;
+        }
+        }
+        @mixin desktop (){
+            @media screen and (min-width:1024px) {
+                @content;
+            }
+            }    

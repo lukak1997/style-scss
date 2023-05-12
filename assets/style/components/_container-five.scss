@@ -1,0 +1,96 @@
+.container-five{
+    width: 100%;
+    background-image: url(../images/high.jpg);
+    background-size: cover;
+    text-align: center;
+     padding-bottom: 40px;
+    @include d-flex(center,center,column);
+    .container__header{
+        font-size: $font-size-medium;
+        padding-top: 60px;
+        color: white;
+        padding-bottom: 30px;
+    }
+    .container__red-bottom{
+      width: 120px;
+      height: 10px;
+      background-color: $color-primery;
+      border-radius: 15px;
+      margin-bottom: 90px;
+    }
+    .container__ultra-wraper{
+        width: 100%;
+        @include d-flex(center,center,column);
+        gap:20px;
+    }
+    .container-wraper{
+        width: 100%;
+        @include d-flex(center,center,column);
+      .container__white-item{
+          width: 80%;
+          background-color: white;
+          position: relative;
+          border-radius: 15px;
+          cursor: pointer;
+          &:hover{
+            background-color: $color-primery;
+            color: white;
+            transition: 0.5s;
+          } 
+          &:hover .container__triangle{
+            border-top: 15px solid $color-primery;
+            transition: 0.5s;
+          }
+
+          .container__paragraph{
+            padding: 35px 27px;
+          }
+          .container__triangle{
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-top: 15px solid white;
+            position: absolute;
+            bottom: -15px;
+            left: 20px;
+          }
+      }
+      .container__img-wraper{
+        padding-top: 40px;
+       width: 77%;
+       gap: 10px;
+       @include d-flex(flex-start,flex-start,row);
+       img{
+        border-radius: 50%;
+       }
+       .container__item-wraper{
+        @include d-flex(flex-start,flex-start,column);
+        margin-top: 10px; 
+        color: white;
+        span{
+            font-size: 13px;
+        }
+        
+       }
+      
+    }
+}
+.container__button{
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    background-color: $color-primery;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid $color-primery;
+
+    }
+}
+@include tablet{
+    .container__ultra-wraper{
+        @include d-flex(center,center,row)
+    }
+}
+}

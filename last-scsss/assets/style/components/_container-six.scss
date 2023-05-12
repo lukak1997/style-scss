@@ -1,0 +1,65 @@
+.container-six{
+    width: 100%;
+     padding:80px 0;
+    @include d-flex(center,center,column);
+    gap: 30px;
+    .container__circle{
+     width: 200px;
+     height: 200px;
+     position: relative;
+     background-color: $color-gray;
+     border-radius: 50%;
+     overflow: hidden;
+     animation: lord 3s infinite linear;
+    }
+    .container__circle::before{
+        width: 50%;
+        height: 50%;
+        background-color:$color-primery;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        
+    }
+    .container__circle::after{
+        width: 80%;
+        height: 80%;
+         position: absolute;
+        content: '';
+        background-color: white;
+        top: 10%;
+        left: 10%;
+        border-radius: 50%;
+    }
+
+    @keyframes lord{
+        from{
+             transform:rotate(0);
+        }
+        to{
+             transform:rotate(360deg);
+        }
+    }
+   @include tablet{
+      &{
+       @include d-flex(center,center,row)
+       
+      }
+     .container__circle{
+        width: 140px;
+        height: 140px;
+     }
+   }
+   @include desktop{
+    &{
+     @include d-flex(center,center,row);
+     gap:80px;
+    }
+   .container__circle{
+      width: 250px;
+      height: 250px;
+   }
+ }
+
+}

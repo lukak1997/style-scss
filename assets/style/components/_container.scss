@@ -1,0 +1,45 @@
+.container{
+    width: 100%;
+    background-color: $color-last;
+    @include d-flex(center,center,column);
+     padding-top: 20px;
+      .container__wraper{
+        @include pad{
+            @include d-flex(center,center,row);
+            gap: 10px;
+            
+        }
+      }
+    .container__header{
+       color: $color-gray;
+   
+        i{
+        color: $color-warning;
+         padding: 0 5px;
+       }
+    }
+    .container__header:last-of-type{
+        font-size: 14px;
+    }
+    .container__icon{
+        margin-top: 20px;
+        margin-bottom: 10px;
+         i{
+            color: $color-primery;
+        }
+    }
+    @include tablet{
+        @include d-flex(space-evenly,center,row);
+        padding-top: 0;
+        .container__icon{
+            margin-top: 10px;
+        }
+    }
+    @include desktop{
+        padding: 20px;
+        .container__wraper{
+         @include d-flex(flex-start,center,row);
+         width: 90%;
+        }
+    }
+}

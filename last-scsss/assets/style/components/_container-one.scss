@@ -1,0 +1,81 @@
+.container-one{
+    background-image: url('../images/leaf.jpg');
+    width: 100%;
+    text-align: center;
+    padding-bottom: 120px;
+   background-size: cover;
+
+    .container__header-one{
+        font-size: $font-size-large;
+        color: $color-secondary;
+        padding-top: 120px;
+    }
+    .container__paragraph-one{
+        line-height: 30px;
+         padding: 0 40px;
+         color: $color-secondary;
+         padding-top: 40px;
+         padding-bottom: 40px
+    }
+    .buttoon-container{
+        @include d-flex(center,center,column);
+        gap: 10px;
+        .red-one{
+            width: 150px;
+            height: 40px;
+            background-color: $color-primery;
+            color: $color-secondary;
+            cursor: pointer;
+            transition: 0.5s;
+            &:hover{
+                background-color: transparent;
+                border: 1px solid $color-primery;
+            }
+        }
+        .transparent{
+            width: 150px;
+            height: 40px;
+            background-color: transparent;
+            color: $color-secondary;
+            border: 1px solid white;
+            transition: 0.5s;
+            cursor: pointer;
+            &:hover{
+                background-color: $color-primery;
+                border: none;
+    
+            }
+        }
+    }
+    @include tablet{
+        .container__header-one{
+            font-size: $font-size-xl;
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-bottom: 20px;
+        }
+        .container__paragraph-one{
+          padding-left: 180px;
+          padding-right: 180px;
+          padding-top: 0;
+        
+        }
+        .buttoon-container{
+        @include d-flex(center,center,row)
+        }
+    }
+    @include desktop{
+        .container__header-one{
+            padding-right: 200px;
+            padding-left: 200px;
+            margin-bottom: 20px;
+             padding-top: 170px;
+        }
+        .container__paragraph-one{
+            padding-right: 250px;
+            padding-left: 250px;
+           margin-bottom: 30px;
+        }
+    }
+  
+}
